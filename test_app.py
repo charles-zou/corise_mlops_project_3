@@ -47,7 +47,7 @@ def test_predict_en_lang():
         "source": "The Washington Post",
         "url": "http://www.washingtonpost.com/wp-dyn/articles/A46063-2005Jan3.html?nav=rss_sports",
         "title": "Ruffin Fills Key Role",
-        "description": "With power forward Etan Thomas having missed the entire season, reserve forward Michael Ruffin has done well in taking his place."
+        "description": "With power forward Etan Thomas having missed the entire season, reserve forward Michael Ruffin has done well in taking his place.",
     }
     response = client.post("/predict", json=sample)
     assert response.status_code == 200
@@ -63,7 +63,7 @@ def test_predict_es_lang():
         "source": "The Washington Post",
         "url": "some/url",
         "title": "Some title",
-        "description": "Hola me llamo Charles."
+        "description": "Hola me llamo Charles.",
     }
     response = client.post("/predict", json=sample)
     assert response.status_code == 200
@@ -78,7 +78,7 @@ def test_predict_non_ascii():
         "source": "The Washington Post",
         "url": "some/url",
         "title": "Some title",
-        "description": "ålphan¨merˆc"
+        "description": "ålphan¨merˆc",
     }
     response = client.post("/predict", json=sample)
     assert response.status_code == 200
